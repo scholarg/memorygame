@@ -1,0 +1,200 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+@media screen and (max-width: 430px){
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+        font-size: unset;
+    }
+
+    .deck {
+        width: 200px;
+        min-height: 240px;
+        padding: 18px;
+    }
+    .deck .card {
+        height: 40px;
+        width: 40px;
+    }
+
+    .score-panel {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 660px) and (min-width: 431px){
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+    }
+
+    .score-panel {
+        width: 280px;
+    }
+
+    .deck {
+        width: 400px;
+        min-height: 420px;
+        padding: 28px;
+    }
+    .deck .card {
+        height: 70px;
+        width: 70px;
+    }
+}
+@media screen and (min-width: 661px){
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+    }
+
+    .score-panel {
+        width: 345px;
+    }
+
+    .deck {
+        width: 660px;
+        min-height: 680px;
+        padding: 32px;
+    }
+    .deck .card {
+        height: 125px;
+        width: 125px;
+    }
+}
+.deck {
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+.deck .card.notm{
+	cursor: default;
+	background: #ec4c3e;
+	font-size: 33px;
+}
+
+
+
+
+.score-panel {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+.score-panel .time {
+    display: inline-block;
+    margin-left: 8%;
+}
+
+.score-panel .time span{
+    font-weight: 600;
+}
+
+.result{
+	width: 500px;
+	height: 500px;
+	margin: -150px auto 0;
+	text-align: center;
+	position: relative;
+	top: 50%;
+}
+.re-won{
+	font-size: 30px;
+	font-weight: 600;
+}
+.re-moves{
+	color: gray;
+	font-size: 22px;
+}
+.re-button{
+	background-color: #0ed0a5;
+	border-radius: 5px;
+	width: 150px;
+    height: 40px;
+	text-align: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 40px;
+    margin: 0 auto;
+}
